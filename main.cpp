@@ -14,6 +14,7 @@ struct pesawat
 };
 int main(){
     int menu;
+  int a, b;
     cout << "Loading......\n";
     cout <<"Opening the program\n";
     for (int i = 0; i <= menu; i++)
@@ -25,9 +26,16 @@ int main(){
     cin >> menu;
     if (menu==1){
         cout << "Lihat tiket\n";
+       ofstream myFile;
+      cin >> a; 
+      cin >> b;
+      myFile.open("pesananan.txt");
+      myFile <<"Nama Pesawat"<< a << endl;
+      myFile << "Kode Booking " << b; 
         cin >> menu;
         if (menu==1){
             cout << "Filter berdasarkan harga termahal\n";
+           
         } else if (menu==2)
         {
             cout << "Filter berdasarkan harga termurah\n";
